@@ -28,6 +28,7 @@ You can learn how to install redis on Windows [here](https://redislabs.com/ebook
 * clone the repo
 * change directory
 * run `npm install`
+* run `npm i --S redis express mongodb mongoose body-parser`
 * run `node app.js`
 * visit http://localhost:3000
 
