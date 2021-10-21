@@ -39,7 +39,7 @@ The API expect the following Parameters: </br>
 `identityNumber` of type number </br>
 
 ## Using Postman
-Make sure post is set to `x-www-form-urlencoded`
+Make sure post is set to `raw and JSON`
 * add user (POST): `/users`
 * delete user (DELETE): `/users/{id}`
 * get all user (GET): `/users`
