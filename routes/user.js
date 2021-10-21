@@ -34,7 +34,7 @@ module.exports = app => {
     });
 
     try {
-      await user.findOneAndUpdate(id, { User })
+      await User.findOneAndUpdate(id, { User })
       res.send(user);
     } catch (err) {
       res.status(400).send(err.message);
@@ -62,4 +62,15 @@ module.exports = app => {
       res.status(400).send(err.message);
     }
   });
+
+  app.delete('/users/:identityNumber', async (req, res) => {
+    var idNumber = req.params.identityNumber;
+
+    try {
+      const user = await User.findOneAndDelete({ identityNumber: idNumber});
+      res.status(200).send(user);
+    } catch (err) {
+      res.status(400).send(err.message);
+    }
+  })
 };
