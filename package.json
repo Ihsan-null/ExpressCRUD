@@ -1,0 +1,19 @@
+{
+  "name": "ms-ihsanulilhamakbar-betest",
+  "version": "1.0.0",
+  "description": "ExpressMongoRedis-betest",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ihsan-null/ExpressCRUD.git"
+  },
+  "author": "Ihsanul Ilham Akbar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ihsan-null/ExpressCRUD/issues"
+  },
+  "homepage": "https://github.com/Ihsan-null/ExpressCRUD#readme"
+}
