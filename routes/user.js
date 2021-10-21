@@ -3,21 +3,21 @@ const User = mongoose.model('User');
 
 module.exports = app => {
   app.get('/users', async (req, res) => {
-    const users = await User.find({}).cache({ expire: 60 });
+    const users = await User.find({}).cache({ expire: 20 });
 
     res.json(users);
   });
 
   app.get('/users/accNum/:accountNumber', async (req, res) => {
     var accNumber = req.params.accountNumber
-    const user = await User.findOne({ accountNumber: accNumber}).cache({ expire: 60});
+    const user = await User.findOne({ accountNumber: accNumber}).cache({ expire: 20});
 
     res.json(user)
   })
 
   app.get('/users/idNum/:identityNumber', async (req, res) => {
     var idNumber = req.params.identityNumber
-    const user = await User.findOne({ identityNumber: idNumber}).cache({ expire: 60});
+    const user = await User.findOne({ identityNumber: idNumber}).cache({ expire: 20});
 
     res.json(user)
   })

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const keys = require('./configs/keys');
 
-require('./models/Article');
+require('./models/user');
 require('./utils/redis');
 
 const app = express();
@@ -16,6 +16,6 @@ mongoose.connect(keys.MONGO_URI, {
   useNewUrlParser: true
 });
 
-require('./routes/articles')(app);
+require('./routes/user')(app);
 
 app.listen(port, () => console.log(`app is listening on port ${port}!`));
